@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="row">
+<div class="col-md-12 catalog-delete text-center">
+<h2> Are you sure you want to delete {{category.name}}? </h2>
+
+<form action="#" method = 'post'>
+
+	<button type="submit" class="btn btn-danger" id="submit" type="submit" value="delete-val">
+	<span class="fa fa-trash-o" aria-hidden="true"></span>Delete</button>
+	<a href = '{{url_for('showCategories')}}'></a>
+
+</form>
+
+</div>
+</div>
+{% endblock %}
