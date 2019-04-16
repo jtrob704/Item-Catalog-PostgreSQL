@@ -17,7 +17,7 @@ import requests
 app = Flask(__name__)
 
 CLIENT_ID = json.loads(
-    open('/var/www/html/client_secrets.json', 'r').read())['web']['client_id']
+    open('client_secrets.json', 'r').read())['web']['client_id']
 APPLICATION_NAME = "Item Catalog Application"
 
 engine = create_engine('postgresql://catalog:catalog@localhost:5432/items')
@@ -354,4 +354,4 @@ if __name__ == '__main__':
     app.config['sqlalchemy'] = 'postgresql://catalog:catalog@localhost:5432/ \
                                 items'
     app.debug = True
-    app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=8000)
